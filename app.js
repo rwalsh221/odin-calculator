@@ -1,4 +1,4 @@
-let calcDisplay, keyPress, calcInputDisplay, calcAdd, calcEqual, calcInput, calcInputSub, prevKeyArr;
+let keyPress, calcInputDisplay, calcAdd, calcSub, calcMultiply, calcDiv, calcEqual, calcClear, calcInput, calcInputSub, prevKeyArr;
 
 prevKeyArr = [];
 
@@ -6,53 +6,121 @@ calcInput = document.querySelector('.calc-screen');
 
 calcInputSub = document.querySelector('.calc-sub');
 
-calcInput.textContent = 0;
+// calcInput.textContent = 0;
 
 calcInputDisplay = function(x) {
     
     if (calcInput.textContent === '0') {
         let keyInput = x;
         calcInput.textContent = keyInput;
-        calcDisplay = calcInput.textContent;
-        return calcDisplay;
+    
     } else if (calcInput.textContent.length <= 9){
         let keyInput = x;
         calcInput.textContent += keyInput;
-        calcDisplay = calcInput.textContent;
-        return calcDisplay;
+        
     }
 };
 
 calcAdd = function() {
     if (calcInputSub.textContent === '0') {
-        calcInputSub.textContent = calcDisplay;
+        calcInputSub.textContent = calcInput.textContent;
         calcInput.textContent = '0';
+      
         
-    } else {
-        let addCalc = (+calcInputSub.textContent) + (+calcDisplay);
+    } else if (calcInput.textContent != '0') {
+        let addCalc = (+calcInputSub.textContent) + (+calcInput.textContent);
         calcInputSub.textContent = addCalc;
         calcInput.textContent= '0';
+        calcDisplay = '0';
     }
 
     prevKeyArr.push('+');
     
 }
 
-calcEqual = function() {
-    if (calcInputSub != '0' && prevKeyArr[prevKeyArr.length - 1] === '+') {
-        let addCalc = (+calcInputSub.textContent) + (+calcDisplay);
-        calcInputSub.textContent = addCalc;
-        let sub = calcInputSub.textContent
-        calcInput.textContent = sub;
-        calcInputSub.textContent = '0';
-
+calcSub = function() {
+    if (calcInputSub.textContent === '0') {
+        calcInputSub.textContent = calcInput.textContent;
+        calcInput.textContent = '0';
+      
+        
+    } else if (calcInput.textContent != '0') {
+        let subCalc = (+calcInputSub.textContent) - (+calcInput.textContent);
+        calcInputSub.textContent = subCalc;
+        calcInput.textContent= '0';
+        calcDisplay = '0';
     }
+
+    prevKeyArr.push('-');
+    
 }
 
+calcMultiply = function() {
+    if (calcInputSub.textContent === '0') {
+        calcInputSub.textContent = calcInput.textContent;
+        calcInput.textContent = '0';
+      
+        
+    } else if (calcInput.textContent != '0') {
+        let multiCalc = (+calcInputSub.textContent) * (+calcInput.textContent);
+        calcInputSub.textContent = multiCalc;
+        calcInput.textContent= '0';
+        calcDisplay = '0';
+    }
+
+    prevKeyArr.push('*');
+};
+
+calcDiv = function() {
+    if (calcInputSub.textContent === '0') {
+        calcInputSub.textContent = calcInput.textContent;
+        calcInput.textContent = '0';
+      
+        
+    } else if (calcInput.textContent != '0') {
+        let divCalc = (+calcInputSub.textContent) / (+calcInput.textContent);
+        calcInputSub.textContent = divCalc;
+        calcInput.textContent= '0';
+        calcDisplay = '0';
+    }
+
+    prevKeyArr.push('/');
+}
+
+calcEqual = function() {
+    if (calcInputSub != '0' && prevKeyArr[prevKeyArr.length - 1] === '+' && prevKeyArr[prevKeyArr.length - 1] != '=' ){
+        calcAdd();
+        // let sub = calcInputSub.textContent
+        calcInput.textContent = calcInputSub.textContent;
+        calcInputSub.textContent = '0';
+}   else if (calcInputSub != '0' && prevKeyArr[prevKeyArr.length - 1] === '-' && prevKeyArr[prevKeyArr.length - 1] != '=' ) {
+        calcSub();
+        // let sub = calcInputSub.textContent
+        calcInput.textContent = calcInputSub.textContent;
+        calcInputSub.textContent = '0';
+}   else if (calcInputSub != '0' && prevKeyArr[prevKeyArr.length - 1] === '*' && prevKeyArr[prevKeyArr.length - 1] != '=' ) {
+        calcMultiply();
+        // let sub = calcInputSub.textContent
+        calcInput.textContent = calcInputSub.textContent;
+        calcInputSub.textContent = '0';
+}   else if (calcInputSub != '0' && prevKeyArr[prevKeyArr.length - 1] === '/' && prevKeyArr[prevKeyArr.length - 1] != '=' ) {
+    calcDiv();
+    // let sub = calcInputSub.textContent
+    calcInput.textContent = calcInputSub.textContent;
+    calcInputSub.textContent = '0';
+}
+    prevKeyArr.push('=');
+};
+
+calcClear = function() {
+    calcInput.textContent = '0';
+    calcInputSub.textContent = '0';
+};
 
 
 
-// NUMBER KEY INPUT FUNCTIONS
+
+// NUMBER KEY INPUT
 
 document.getElementById('key-1').addEventListener('click', function() {
     calcInputDisplay(1);
@@ -90,14 +158,32 @@ document.getElementById('key-9').addEventListener('click', function() {
     calcInputDisplay(9);
 });
 
-// CALC KEY INPUT FUNCTION
+// CALC KEY INPUT 
 
 document.getElementById('key-add').addEventListener('click', function() {
     calcAdd();
-    console.log('btnpress')
+    console.log('btnpress-add')
+});
+
+document.getElementById('key-sub').addEventListener('click', function() {
+    calcSub();
+    console.log('btnpress-minus')
+});
+
+document.getElementById('key-mul').addEventListener('click', function() {
+    calcMultiply();
+    console.log('btnpress-multiply')
+});
+
+document.getElementById('key-divide').addEventListener('click', function() {
+    calcDiv();
+    console.log('btnpress-div')
 });
 
 document.getElementById('key-equal').addEventListener('click', function() {
     calcEqual();
 });
 
+document.getElementById('key-clear').addEventListener('click', function() {
+    calcClear();
+});
