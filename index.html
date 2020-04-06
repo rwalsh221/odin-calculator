@@ -2,39 +2,170 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>CALCULATOR</title>
         
     </head>
-        <h1>CALCULATOR</h1>
-    <body>
-        
-        <section class="calc-container">
-
-           
-            <h3 class="calc-screen">0</h3>
-            <h4 class="calc-sub">0</h4>
-            
-            <button class="btn" id='key-1'>1</button>
-            <button class="btn" id='key-2'>2</button>
-            <button class="btn" id='key-3'>3</button>
-            <button class="btn" id='key-4'>4</button>
-            <button class="btn" id='key-5'>5</button>
-            <button class="btn" id='key-6'>6</button>
-            <button class="btn" id='key-7'>7</button>
-            <button class="btn" id='key-8'>8</button>
-            <button class="btn" id='key-9'>9</button>
-            <button class="btn" id='key-0'>0</button>
-            <button class="btn" id='key-add'>+</button>
-            <button class="btn" id='key-sub'>-</button>
-            <button class="btn" id='key-mul'>*</button>
-            <button class="btn" id='key-divide'>/</button>
-            <button class="btn" id='key-equal'>=</button>
-            <button class="btn" id='key-clear'>CE</button>
-            <button class="btn" id='key-dpoint'>.</button>
-
+        <section class="header">
+            <h1>CALCULATOR</h1>
         </section>
+        
+    <body>
+
+        <section class="bezel-bottom">
+            <section class="bezel-top">
+
+                <section class="calc-top">
+                    <div class="calc-display">
+                        <h4 class="calc-sub">0</h4>
+                        <h3 class="calc-screen">0</h3>
+                    </div>
+                </section>
+        
+                <section class="calc-bottom">
+                    
+                    <div class="blue-bar"></div>
+                    
+                    <div class="input">
+                        <p class="symbol mleft">1</p>
+                        <button class="btn" id='key-1'></button>
+                    </div>
+                    
+                    <div class="input">
+                        <p class="symbol">2</p>
+                        <button class="btn" id='key-2'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">3</p>
+                        <button class="btn" id='key-3'></button>
+                    </div>
+                    
+                    <div class="input">
+                        <p class="symbol">4</p>
+                        <button class="btn" id='key-4'></button>
+                    </div>
+
+                    <div class="line-one">
+
+                        <p>&#x25BC; ALM ON &#8226; OFF</p>
+                        <div class="line-one__middle"></div>
+                        <p>DATE/ST &#8226; hour &#x25B2;</p>
+
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol mleft">5</p>
+                        <button class="btn" id='key-5'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">6</p>
+                        <button class="btn" id='key-6'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">7</p>
+                        <button class="btn" id='key-7'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">8</p>
+                        <button class="btn" id='key-8'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol mleft">9</p>
+                        <button class="btn" id='key-9'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">0</p>
+                        <button class="btn" id='key-0'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">+</p>
+                        <button class="btn" id='key-add'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">-</p>
+                        <button class="btn" id='key-sub'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol mleft">*</p>
+                        <button class="btn" id='key-mul'></button>
+                    </div>
+                    
+                    <div class="input">
+                        <p class="symbol">/</p>
+                        <button class="btn" id='key-divide'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">=</p>
+                        <button class="btn" id='key-equal'></button>
+                    </div>
+        
+                    <div class="input">
+                        <p class="symbol">.</p>
+                        <button class="btn" id='key-dpoint'></button>
+                    </div>
+        
+                    
+                </section>
+            </section>
+        </section>
+        
+        <button class="btn" id='key-clear'>CE</button>
 
 
         <script src="app.js"></script>
     </body>
 </html>
+
+<!-- <section class="calc-container">
+            
+            
+          
+            <div class="calculator">
+            
+            <p class="symbol mleft">1</p>
+            <button class="btn" id='key-1'></button>
+            <p class="symbol">2</p>
+            <button class="btn" id='key-2'></button>
+            <p class="symbol">3</p>
+            <button class="btn" id='key-3'></button>
+            <p class="symbol">4</p>
+            <button class="btn" id='key-4'></button>
+            <p class="symbol mleft">5</p>
+            <button class="btn" id='key-5'></button>
+            <p class="symbol">6</p>
+            <button class="btn" id='key-6'></button>
+            <p class="symbol">7</p>
+            <button class="btn" id='key-7'></button>
+            <p class="symbol">8</p>
+            <button class="btn" id='key-8'></button>
+            <p class="symbol mleft">9</p>
+            <button class="btn" id='key-9'></button>
+            <p class="symbol">0</p>
+            <button class="btn" id='key-0'></button>
+            <p class="symbol">+</p>
+            <button class="btn" id='key-add'></button>
+            <p class="symbol">-</p>
+            <button class="btn" id='key-sub'></button>
+            <p class="symbol mleft">*</p>
+            <button class="btn" id='key-mul'></button>
+            <p class="symbol">/</p>
+            <button class="btn" id='key-divide'></button>
+            <p class="symbol">=</p>
+            <button class="btn" id='key-equal'></button>
+            <p class="symbol">.</p>
+            <button class="btn" id='key-dpoint'></button>
+
+            <div class="line-test line1"></div>
+            <div class="line-test line2"></div>
+            <div class="line-test line3"></div>
+        </div>  -->
