@@ -20,7 +20,12 @@ calcInputDisplay = function(x) {
     if (calcInput.textContent === '0') {
         let keyInput = x;
         calcInput.textContent = keyInput;
-    
+
+    } else if (prevKeyArr[prevKeyArr.length - 1] === "=") {
+        let keyInput = x;
+        calcInput.textContent = keyInput;
+        prevKeyArr.push('r')
+
     } else if (calcInput.textContent.length <= 9){
         let keyInput = x;
         calcInput.textContent += keyInput;
