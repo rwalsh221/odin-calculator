@@ -54,9 +54,15 @@ calcDPoint = function() {
     return decimalPoint
 };
 
+let oparray = []
 // CALCULATOR OPERATOR FUNCTION REPLACE X WITH OPERATOR
 calcOperator = function(x) {
-    let operator = x
+    let operator = x;
+    console.log(operator)
+    
+    oparray.push(operator)
+    
+    console.log(oparray)
     
     
     if (calcInputSub.textContent === '0') {
@@ -64,30 +70,34 @@ calcOperator = function(x) {
         calcInput.textContent = '0';
         
 
-    }   else if (calcInput.textContent != '0' && operator === '+') {
-    
+    }   else if (calcInput.textContent != '0' && oparray[oparray.length - 2] === '+') {
+        
         let resCalc = (+calcInputSub.textContent) + (+calcInput.textContent);
         resCalcString = resCalc.toString()
         calcInputSub.textContent = resCalcString.substring(0,9);
+        calcInput.textContent = '0'
 
-    }   else if (calcInput.textContent != '0' && operator === '-') {
-    
+    }   else if (calcInput.textContent != '0' && oparray[oparray.length - 2] === '-') {
+        
         let resCalc = (+calcInputSub.textContent) - (+calcInput.textContent);
         resCalcString = resCalc.toString()
         calcInputSub.textContent = resCalcString.substring(0,9);
+        calcInput.textContent = '0'
 
-    }   else if (calcInput.textContent != '0' && operator === '*') {
+    }   else if (calcInput.textContent != '0' && oparray[oparray.length - 2] === '*') {
     
         let resCalc = (+calcInputSub.textContent) * (+calcInput.textContent);
         resCalcString = resCalc.toString()
         calcInputSub.textContent = resCalcString.substring(0,9);
         calcInput.textContent= '0';
+        calcInput.textContent = '0'
 
-    }   else if (calcInput.textContent != '0' && operator === '/') {
+    }   else if (calcInput.textContent != '0' && oparray[oparray.length - 2] === '/') {
     
         let resCalc = (+calcInputSub.textContent) / (+calcInput.textContent);
         resCalcString = resCalc.toString()
         calcInputSub.textContent = resCalcString.substring(0,9);
+        calcInput.textContent = '0'
 }   
     
     prevKeyArr.push(`${x}`);
