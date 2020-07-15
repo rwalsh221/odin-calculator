@@ -110,6 +110,7 @@ h1 {
 .side-notch__left {
   top: 45%;
   left: -6%;
+  background-color: aqua;
 }
 
 .side-notch__right {
@@ -307,7 +308,7 @@ font-size: 2.6rem;
 .btn-active {
   border: 5px solid var(--main-color-black-dark);
   box-shadow: none;
-  transform: translateY(2px)
+  transform: translateY(2px);
 }
 
 .btn:focus {

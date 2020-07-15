@@ -46,8 +46,10 @@ calcInputDisplayZero = function() {
 calcDPoint = function() {
     if (calcInput.textContent === '0' && decimalPoint === false) {
         calcInput.textContent = '0.'
+        prevKeyArr.push('.')
     } else if (calcInput.textContent.length < 9 && decimalPoint === false) {
         calcInput.textContent += '.'
+        prevKeyArr.push('.')
     }
 
     decimalPoint = true
@@ -129,6 +131,7 @@ calcEqual = function() {
     calcInputSub.textContent = '0';
 }
     prevKeyArr.push('=');
+    
 };
 
 // CLEAR DISPLAY
