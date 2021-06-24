@@ -1,164 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <link type="text/css" rel="stylesheet" href="style.css">
-        
-        <title>CALCULATOR</title>
-        
-    </head>
-        
-        
-    <body>
+  <head>
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" href="style.css" />
 
-       
+    <title>CALCULATOR</title>
+  </head>
+  <body>
+    <section class="bezel-top">
+      <button class="btn-reset" id="key-clear"></button>
 
-        <section class="bezel-top">
-            
-            <button class="btn-reset" id='key-clear'></button>
+      <div class="side-notch side-notch__left"></div>
+      <div class="side-notch side-notch__right"></div>
+      <div class="side-notch__clear"></div>
+      <!-- CALCULATOR TOP HALF -->
 
-            <div class="side-notch side-notch__left"></div>
-            <div class="side-notch side-notch__right"></div>
-            <div class="side-notch__clear"></div>
-            <!-- CALCULATOR TOP HALF -->
+      <section class="calc-top">
+        <div class="calc-top__heading">
+          <p class="white">CASIO</p>
+          <p class="blue">WATER RESIST <br />ALARM CHRONO</p>
+          <p class="gold">WR</p>
+        </div>
 
-            <section class="calc-top">
-                
-                <div class="calc-top__heading">
-                    <p class="white">CASIO</p>
-                    <p class="blue">WATER RESIST <br>ALARM CHRONO</p>
-                    <p class="gold">WR</p>
-                </div>
-                
-                <div class="calc-top__display">
-                    <div class="calc-display">
-                        <h4 class="calc-sub">0</h4>
-                        <h3 class="calc-screen">0</h3>
-                        <p class="side-text">ADJ &#9725; &#9726; MODE/C</p>
-                    </div>
-                    
-                </div>
+        <div class="calc-top__display">
+          <div class="calc-display">
+            <h4 class="calc-sub">0</h4>
+            <h3 class="calc-screen">0</h3>
+            <p class="side-text">ADJ &#9725; &#9726; MODE/C</p>
+          </div>
+        </div>
+      </section>
 
-            </section>
-            
-            <!-- CALCULATOR BOTTOM HALF -->
+      <!-- CALCULATOR BOTTOM HALF -->
 
-            <section class="calc-bottom">
-                
-                <div class="blue-bar"></div>
-                
-                <!-- CALC INPUTS -->
+      <section class="calc-bottom">
+        <div class="blue-bar"></div>
 
-                <div class="input">
-                    <p class="symbol">7</p>
-                    <button class="btn" id='key-7'></button>
-                </div>
-    
-                <div class="input">
-                    <p class="symbol">8</p>
-                    <button class="btn" id='key-8'></button>
-                </div>
+        <!-- CALC INPUTS -->
 
-                <div class="input">
-                    <p class="symbol">9</p>
-                    <button class="btn" id='key-9'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">7</p>
+          <button class="btn" id="key-7"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol operator">&divide;</p>
-                    <button class="btn" id='key-divide'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">8</p>
+          <button class="btn" id="key-8"></button>
+        </div>
 
-                <div class="line line-one">
-                    <p>&#x25BC; ALM ON &#8226; OFF</p>
-                    <div class="line-one__middle"></div>
-                    <p>DATE/ST &#8226; Hour &#x25B2;</p>
-                </div>
+        <div class="input">
+          <p class="symbol">9</p>
+          <button class="btn" id="key-9"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol">4</p>
-                    <button class="btn" id='key-4'></button>
-                </div>
+        <div class="input">
+          <p class="symbol operator">&divide;</p>
+          <button class="btn" id="key-divide"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol">5</p>
-                    <button class="btn" id='key-5'></button>
-                </div>
+        <div class="line line-one">
+          <p>&#x25BC; ALM ON &#8226; OFF</p>
+          <div class="line-one__middle"></div>
+          <p>DATE/ST &#8226; Hour &#x25B2;</p>
+        </div>
 
-                <div class="input">
-                    <p class="symbol">6</p>
-                    <button class="btn" id='key-6'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">4</p>
+          <button class="btn" id="key-4"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol operator">&times;</p>
-                    <button class="btn" id='key-mul'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">5</p>
+          <button class="btn" id="key-5"></button>
+        </div>
 
-                <div class="line line-two">
-                    <p>SIG ON &#8226; OFF &#x25B2;</p>
-                </div>
+        <div class="input">
+          <p class="symbol">6</p>
+          <button class="btn" id="key-6"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol">1</p>
-                    <button class="btn" id='key-1'></button>
-                </div>
-                
-                <div class="input">
-                    <p class="symbol">2</p>
-                    <button class="btn" id='key-2'></button>
-                </div>
-    
-                <div class="input">
-                    <p class="symbol">3</p>
-                    <button class="btn" id='key-3'></button>
-                </div>
-                
-                
+        <div class="input">
+          <p class="symbol operator">&times;</p>
+          <button class="btn" id="key-mul"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol operator">&minus;</p>
-                    <button class="btn" id='key-sub'></button>
-                </div>
-                
-                <div class="line line-one">
-                    <p>&#9660; LAP &#8226; RESET</p>
-                    <div class="line-one__middle"></div>
-                    <p>START &#8226; STOP &#9660;</p>
-                </div>
+        <div class="line line-two">
+          <p>SIG ON &#8226; OFF &#x25B2;</p>
+        </div>
 
-                <div class="input">
-                    <p class="symbol">0</p>
-                    <button class="btn" id='key-0'></button>
-                </div>
-    
-                <div class="input">
-                    <p class="symbol">.</p>
-                    <button class="btn" id='key-dpoint'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">1</p>
+          <button class="btn" id="key-1"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol operator">=</p>
-                    <button class="btn" id='key-equal'></button>
-                </div>
+        <div class="input">
+          <p class="symbol">2</p>
+          <button class="btn" id="key-2"></button>
+        </div>
 
-                <div class="input">
-                    <p class="symbol operator">&plus;</p>
-                    <button class="btn" id='key-add'></button>
-                </div>
-    
-                <div class="line line-one">
-                </div>
+        <div class="input">
+          <p class="symbol">3</p>
+          <button class="btn" id="key-3"></button>
+        </div>
 
-            </section>
-        </section>
-        
-        <!-- CLEAR BTN -->
+        <div class="input">
+          <p class="symbol operator">&minus;</p>
+          <button class="btn" id="key-sub"></button>
+        </div>
 
-        
+        <div class="line line-one">
+          <p>&#9660; LAP &#8226; RESET</p>
+          <div class="line-one__middle"></div>
+          <p>START &#8226; STOP &#9660;</p>
+        </div>
 
+        <div class="input">
+          <p class="symbol">0</p>
+          <button class="btn" id="key-0"></button>
+        </div>
 
-        <script src="app.js"></script>
-    </body>
+        <div class="input">
+          <p class="symbol">.</p>
+          <button class="btn" id="key-dpoint"></button>
+        </div>
+
+        <div class="input">
+          <p class="symbol operator">=</p>
+          <button class="btn" id="key-equal"></button>
+        </div>
+
+        <div class="input">
+          <p class="symbol operator">&plus;</p>
+          <button class="btn" id="key-add"></button>
+        </div>
+
+        <div class="line line-one"></div>
+      </section>
+    </section>
+
+    <!-- CLEAR BTN -->
+
+    <script src="app.js"></script>
+  </body>
 </html>
-
