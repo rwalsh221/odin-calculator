@@ -286,11 +286,17 @@ h4 {
 }
 
 .line-one {
-  grid-template-columns: 1fr max-content 10fr max-content 1fr;
+  grid-template-columns: 2fr max-content 10fr max-content 1fr;
 }
 
 .line-two {
   grid-template-columns: 15fr max-content 1fr;
+}
+
+.line-full {
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0;
+  margin-bottom: 1rem;
 }
 
 .line::before,
