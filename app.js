@@ -1,5 +1,3 @@
-// TODO: LOOK OVER CODE FOR TIDY
-
 //  VARIABLES
 let calcInputDisplay,
   calcInputDisplayZero,
@@ -54,19 +52,11 @@ calcDPoint = function () {
   }
 
   decimalPoint = true;
-  return decimalPoint;
 };
 
 let oparray = [];
 // CALCULATOR OPERATOR FUNCTION REPLACE X WITH OPERATOR
 calcOperator = function (x) {
-  let operator = x;
-  console.log(operator);
-
-  oparray.push(operator);
-
-  console.log(oparray);
-
   if (calcInputSub.textContent === '0') {
     calcInputSub.textContent = calcInput.textContent;
     calcInput.textContent = '0';
@@ -107,7 +97,6 @@ calcOperator = function (x) {
 
   prevKeyArr.push(`${x}`);
   decimalPoint = false;
-  return decimalPoint;
 };
 
 // EQUAL FUNCTION
@@ -118,7 +107,7 @@ calcEqual = function () {
     prevKeyArr[prevKeyArr.length - 1] != '='
   ) {
     calcOperator('+');
-    // let sub = calcInputSub.textContent
+
     calcInput.textContent = calcInputSub.textContent;
     calcInputSub.textContent = '0';
   } else if (
@@ -127,7 +116,7 @@ calcEqual = function () {
     prevKeyArr[prevKeyArr.length - 1] != '='
   ) {
     calcOperator('-');
-    // let sub = calcInputSub.textContent
+
     calcInput.textContent = calcInputSub.textContent;
     calcInputSub.textContent = '0';
   } else if (
@@ -136,7 +125,7 @@ calcEqual = function () {
     prevKeyArr[prevKeyArr.length - 1] != '='
   ) {
     calcOperator('*');
-    // let sub = calcInputSub.textContent
+
     calcInput.textContent = calcInputSub.textContent;
     calcInputSub.textContent = '0';
   } else if (
@@ -145,7 +134,7 @@ calcEqual = function () {
     prevKeyArr[prevKeyArr.length - 1] != '='
   ) {
     calcOperator('/');
-    // let sub = calcInputSub.textContent
+
     calcInput.textContent = calcInputSub.textContent;
     calcInputSub.textContent = '0';
   }
@@ -157,7 +146,6 @@ calcClear = function () {
   calcInput.textContent = '0';
   calcInputSub.textContent = '0';
   decimalPoint = false;
-  return decimalPoint;
 };
 
 // KEYPRESS FUNCTION ADD ACTIVE CLASS
@@ -300,7 +288,7 @@ document.body.addEventListener('keydown', function (event) {
   }
 });
 
-// FOR KEYPRESS FUNCTION REMOVE ACTIVE CLASS
+// FOR KEYBOARD KEYPRESS FUNCTION REMOVE ACTIVE CLASS
 
 document.body.addEventListener('keyup', function (event) {
   let char = event.char || event.charCode || event.which;
@@ -457,22 +445,18 @@ document.getElementById('key-0').addEventListener('click', function () {
 
 document.getElementById('key-add').addEventListener('click', function () {
   calcOperator('+');
-  console.log('btnpress-add');
 });
 
 document.getElementById('key-sub').addEventListener('click', function () {
   calcOperator('-');
-  console.log('btnpress-minus');
 });
 
 document.getElementById('key-mul').addEventListener('click', function () {
   calcOperator('*');
-  console.log('btnpress-multiply');
 });
 
 document.getElementById('key-divide').addEventListener('click', function () {
   calcOperator('/');
-  console.log('btnpress-div');
 });
 
 document.getElementById('key-equal').addEventListener('click', function () {
@@ -486,73 +470,3 @@ document.getElementById('key-clear').addEventListener('click', function () {
 document.getElementById('key-dpoint').addEventListener('click', function () {
   calcDPoint();
 });
-
-/// FIRST TRY AND NOTES**********************************************************************************************************************************
-/*
-calcAdd = function() {
-    if (calcInputSub.textContent === '0') {
-        calcInputSub.textContent = calcInput.textContent;
-        calcInput.textContent = '0';
-      
-        
-    } else if (calcInput.textContent != '0') {
-        // let addCalc = (+calcInputSub.textContent) + (+calcInput.textContent);
-        calcInputSub.textContent = (+calcInputSub.textContent) + (+calcInput.textContent);
-        calcInput.textContent= '0';
-        // calcDisplay = '0';
-    }
-
-    prevKeyArr.push('+');
-    decimalPoint = false
-    return decimalPoint
-}
-
-calcSub = function() {
-    if (calcInputSub.textContent === '0') {
-        calcInputSub.textContent = calcInput.textContent;
-        calcInput.textContent = '0';
-      
-        
-    } else if (calcInput.textContent != '0') {
-        let subCalc = (+calcInputSub.textContent) - (+calcInput.textContent);
-        calcInputSub.textContent = subCalc;
-        calcInput.textContent= '0';
-        calcDisplay = '0';
-    }
-
-    prevKeyArr.push('-');
-    
-}
-
-calcMultiply = function() {
-    if (calcInputSub.textContent === '0') {
-        calcInputSub.textContent = calcInput.textContent;
-        calcInput.textContent = '0';
-      
-        
-    } else if (calcInput.textContent != '0') {
-        let multiCalc = (+calcInputSub.textContent) * (+calcInput.textContent);
-        calcInputSub.textContent = multiCalc;
-        calcInput.textContent= '0';
-        calcDisplay = '0';
-    }
-
-    prevKeyArr.push('*');
-};
-
-calcDiv = function() {
-    if (calcInputSub.textContent === '0') {
-        calcInputSub.textContent = calcInput.textContent;
-        calcInput.textContent = '0';
-      
-        
-    } else if (calcInput.textContent != '0') {
-        let divCalc = (+calcInputSub.textContent) / (+calcInput.textContent);
-        calcInputSub.textContent = divCalc;
-        calcInput.textContent= '0';
-        calcDisplay = '0';
-    }
-
-    prevKeyArr.push('/');
-};
-*/
