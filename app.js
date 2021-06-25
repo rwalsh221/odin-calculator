@@ -1,3 +1,5 @@
+// TODO: LOOK OVER CODE FOR TIDY
+
 //  VARIABLES
 let calcInputDisplay,
   calcInputDisplayZero,
@@ -298,7 +300,7 @@ document.body.addEventListener('keydown', function (event) {
   }
 });
 
-// KEYPRESS FUNCTION REMOVE ACTIVE CLASS
+// FOR KEYPRESS FUNCTION REMOVE ACTIVE CLASS
 
 document.body.addEventListener('keyup', function (event) {
   let char = event.char || event.charCode || event.which;
