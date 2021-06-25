@@ -57,6 +57,10 @@ calcDPoint = function () {
 let oparray = [];
 // CALCULATOR OPERATOR FUNCTION REPLACE X WITH OPERATOR
 calcOperator = function (x) {
+  let operator = x;
+
+  oparray.push(operator);
+
   if (calcInputSub.textContent === '0') {
     calcInputSub.textContent = calcInput.textContent;
     calcInput.textContent = '0';
